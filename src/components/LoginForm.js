@@ -24,7 +24,6 @@ class LoginForm extends React.Component {
           if (this.state.username !== "" && this.state.password !== "")
             this.props.handleLogin(this.state);
         }}
-        onChange ={(e) => this.handleEvent(e)}
       >
         <div>
           <label>
@@ -34,6 +33,7 @@ class LoginForm extends React.Component {
               name="username"
               type="text"
               value={this.state.username}
+              onChange={(e) => this.handleEvent(e)}
             />
           </label>
         </div>
@@ -45,6 +45,7 @@ class LoginForm extends React.Component {
               name="password"
               type="password"
               value={this.state.password}
+              onChange={(e) => this.handleEvent(e)}
             />
           </label>
         </div>
